@@ -20,7 +20,7 @@ const Calculator = () => {
   // Step 5: Create validation function
   const validateInput = () => {
     if (num1.trim() === '' || num2.trim() === '') {
-      setError('Both fields are required');
+      setError('error');
       return false;
     }
     if (!/^-?\d*\.?\d+$/.test(num1) || !/^-?\d*\.?\d+$/.test(num2)) {
@@ -67,8 +67,8 @@ const Calculator = () => {
   return (
     <div>
       <h1>React Calculator</h1>
-      <input type="text" placeholder="Enter number 1" value={num1} onChange={handleNum1Change} />
-      <input type="text" placeholder="Enter number 2" value={num2} onChange={handleNum2Change} />
+      <input type="text" placeholder="NUM 1" value={num1} onChange={handleNum1Change} />
+      <input type="text" placeholder="NUM 2" value={num2} onChange={handleNum2Change} />
       <div>
         <button onClick={handleAddition}>+</button>
         <button onClick={handleSubtraction}>-</button>
